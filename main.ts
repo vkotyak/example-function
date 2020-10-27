@@ -8,16 +8,18 @@ input.onButtonPressed(Button.A, function () {
     }
 })
 input.onButtonPressed(Button.AB, function () {
-    for (let index = 0; index <= a - 1; index++) {
-        arr[index] = randint(1, 5)
-    }
+    fillArray(a, 5)
     basic.clearScreen()
 })
+function fillArray (size: number, max: number) {
+    for (let index = 0; index <= size; index++) {
+        arr[index] = randint(1, max)
+    }
+    return 1
+}
 let y = 0
 let arr: number[] = []
 let a = 0
 a = 5
 arr = []
-for (let index = 0; index <= a - 1; index++) {
-    arr[index] = randint(1, 5)
-}
+fillArray(a, 5)
